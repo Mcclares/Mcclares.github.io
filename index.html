@@ -1,79 +1,191 @@
 <!DOCTYPE html>
-<html>
+<html lang="ru">
 
 <head>
-    <title>Red Panda</title>
-    <style>
-       table {
-            width: 50%;
-            border-collapse: collapse;
-            margin: 20px auto;
-        }
-
-        table, th, td {
-            border: 1px solid black;
-        }
-
-        th, td {
-            padding: 10px;
-            text-align: center;
-        }
-
-        th {
-            background-color: #f2f2f2;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-
-        tr:nth-child(odd) {
-            background-color: #ffffff;
-        }
-    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Строительная компания</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+    <script src="script.js" defer></script>
 </head>
 
 <body>
-    <p>Tudengikood: 233708IACB </p>
-    <a href="https://taltech.ee">taltech.ee</a>
-    <br>
-    <img width="300px" src="https://www.pwpark.com/wp-content/uploads/2018/07/red-panda.jpg" alt="RedPanda">
-    <h1>Hello, I am red panda</h1>
-        <p>It is my history</p>
-        <p>Red pandas, or fire foxes, are fascinating and mysterious creatures that inhabit the mountain forests of South and
-        Southeast Asia. Their history is laden with legends and myths, and they have become a symbol of nature and mystery.
-        
-        Long ago, when the world was still forming, red pandas lived on earth freely and without fear. It is said that they were
-        close friends of wise ancient monks who cared for nature and meditated in secluded temples in the mountains. The monks
-        taught the red pandas respect for the environment and balance.
-        
-        Over time, however, the world has changed. The forests where the red pandas lived began to diminish due to tree felling
-        and road building. The environment began to change and the red pandas had to face new challenges. They began to
-          disappear from their historic habitats.</p>
-        <table>
-        <tr>
-            <th>Country</th>
-            <th>Year</th>
-            <th>Population</th>
-        </tr>
-        <tr>
-            <td>China</td>
-            <td>1990</td>
-            <td>2 mln</td>
-        </tr>
-        <tr>
-            <td>Japan</td>
-            <td>1995</td>
-            <td>1.5 mln</td>
-        </tr>
-        <tr>
-            <td>Nepal</td>
-            <td>2000</td>
-            <td>0.5 mln</td>
-        </tr>
-        </table>
-        <span> </span>
-        
+    <header>
+        <h1 class="fade-in">K.S.V Ehitus</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#gallery">Галерея</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="about" class="about">
+        <div class="about-content">
+            <h2>О нас</h2>
+            <h3><b>Мы воплощаем идеи в реальность.</b></h3>
+            <div class="about-text">
+                <p>Мы — строительная компания "Большой М", и мы строим не просто дома, а мечты! С нами ваш будущий дом будет
+                    крепким, как дружба, и уютным, как объятия. Мы не просто кладем кирпичи, мы создаем пространства, где
+                    рождаются воспоминания.</p>
+                <p>Наша команда — это не просто строители, это мастера своего дела, которые знают, как превратить ваш проект в
+                    реальность. Мы работаем с душой, а наши дома — с теплом. Доверьте нам свои планы, и мы сделаем их выше, шире
+                    и надежнее!</p>
+                <p>С "Большим М" вы получаете не просто строительство, а уверенность в завтрашнем дне. Потому что мы строим не
+                    только стены, но и доверие.</p>
+            </div>
+            <div class="about-features">
+                <div class="feature-item">
+                    <img src="static/implementation.png" alt="Архитектура">
+                    <p><b>Внешние работы</b></p>
+                </div>
+                <div class="feature-item">
+                    <img src="static/interior.png" alt="Интерьер">
+                    <p><b>Внутренние работы</b></p>
+                </div>
+                <div class="feature-item">
+                    <img src="static/blueprint.png" alt="Планировка">
+                    <p><b>Планировка</b></p>
+                </div>
+                <div class="feature-item">
+                    <img src="static/number-12.png" alt="12 лет на рынке">
+                    <p><b>лет на рынке</b></p>
+                </div>
+            </div>
+        </div>
+        <div class="about-image">
+            <img src="static/SecondImage.jpg" alt="Строительная компания Большой М">
+        </div>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Услуги</h2>
+        <div class="services-container">
+            <div class="service">
+                <div class="service-content">
+                    <h3>Строительство домов</h3>
+                    <p>Полный цикл строительства частных и коммерческих зданий.</p>
+                    <div class="feature-item-service">
+                        <img src="static/architecture.png" alt="Строительство домов">
+                    </div>
+                </div>
+            </div>
+            <div class="service">
+                <div class="service-content">
+                    <h3>Ремонт и отделка</h3>
+                    <p>Ремонт любой сложности: от косметического до капитального.</p>
+                    <div class="feature-item-service">
+                        <img src="static/roller-brush.png" alt="Ремонт отделка">
+                    </div>
+                </div>
+            </div>
+            <div class="service">
+                <div class="service-content">
+                    <h3>Бетонирование и армирование</h3>
+                    <p>Подготавливаем для бетонирования любую площадь.</p>
+                    <div class="feature-item-service">
+                        <img src="static/concrete.png" alt="Бетонирование">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section">
+        <h2>Наши работы</h2>
+        <div class="gallery-container slide-in">
+            <div class="gallery-item">
+                <img src="static/Project1.jpg" alt="Проект 1">
+                <div class="overlay">
+                    <p>Проект 1</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="static/Project2.jpg" alt="Проект 2">
+                <div class="overlay">
+                    <p>Проект 2</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="static/project3.jpg" alt="Проект 3">
+                <div class="overlay">
+                    <p>Проект 3</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="static/project4.jpg" alt="Проект 4">
+                <div class="overlay">
+                    <p>Проект 3</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Контакты</h2>
+        <div class="contact-info">
+            <div class="contact-item">
+                <img src="static/telephone-call.png" alt="Телефон" class="contact-icon">
+                <p>+7 (999) 123-45-67</p>
+            </div>
+            <div class="contact-item">
+                <img src="static/email.png" alt="Email" class="contact-icon">
+                <p>info@stroicompany.ru</p>
+            </div>
+        </div>
+        <div id="map">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.372789924804!2d37.61729931593084!3d55.75582698055302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506f52311f!2sRed%20Square!5e0!3m2!1sen!2sru!4v1633012345678!5m2!1sen!2sru"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+            </iframe>
+        </div>
+    
+    </section>
+
+    <footer class="footer">
+        <div class="footer-logo">
+            <img src="logo.png" alt="Логотип компании">
+        </div>
+        <div class="footer-content">
+            <p>© 2023 Строительная компания "Большой М". Все права защищены.</p>
+            <p>Сайт разработан: <a href="https://example.com" target="_blank">GoForge Corporation</a></p>
+        </div>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="https://vk.com" target="_blank"><img src="vk-icon.png" alt="VK"></a>
+        </div>
+    </footer>
+    <button id="scroll-to-top" onclick="scrollToTop()">↑ Наверх</button>
+
+    <script>
+        window.onscroll = function () {
+                var button = document.getElementById("scroll-to-top");
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    button.style.display = "block";
+                } else {
+                    button.style.display = "none";
+                }
+            };
+            function scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                });
+            }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            gsap.from(".fade-in", { opacity: 0, duration: 1, y: -20, stagger: 0.3 });
+            gsap.from(".slide-in", {
+                opacity: 0, x: -100, duration: 1, stagger: 0.3, scrollTrigger: {
+                    trigger: ".slide-in",
+                    start: "top 80%",
+                    toggleActions: "play none none none"
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>
