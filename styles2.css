@@ -498,6 +498,18 @@ nav ul a img:hover {
 .desktop-text {
     display: none;
 }
+@media (max-width:970px) {
+    #contact {
+        display: flex;
+        flex-direction: column;
+    }
+    #contact-form {
+        width: 300px;
+        margin:50px auto;
+    }
+    
+
+}
 
 /* На десктопах показываем полный текст */
 @media (min-width: 768px) {
@@ -536,6 +548,7 @@ nav ul a img:hover {
     .service {
         width: 45%;
     }
+    
 }
 
 @media (max-width: 768px) {
@@ -581,10 +594,6 @@ nav ul a img:hover {
         width: 100%;
     }
 
-    #contact {
-        display: flex;
-        flex-direction: column;
-    }
 }
 
 @media (max-width: 480px) {
@@ -592,6 +601,7 @@ nav ul a img:hover {
         font-size: 15px;
         display: flex;
         flex-direction: column;
+        height: 50vh;
     }
 
     nav ul {
@@ -647,6 +657,9 @@ nav ul a img:hover {
 
     .about-image {
         display: none;
+    }
+    #contact-form {
+        width: 200px;
     }
 }
 
@@ -718,9 +731,4 @@ nav ul a img:hover {
         opacity: 0.85;
     }
 
-    #contact {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
 }
