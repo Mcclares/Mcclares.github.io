@@ -669,7 +669,7 @@ nav ul a img:hover {
         font-size: 10px;
         display: flex;
         flex-direction: column;
-        height: 50vh;
+        height: 65vh;
     }
 
     .language-buttons {
