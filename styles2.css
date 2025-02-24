@@ -526,7 +526,7 @@ nav ul a img:hover {
 @media (max-width: 1024px) {
     header {
         width: 100%;
-        height: 75vh;
+        height: 50vh;
         font-size: 20px;
         display: flex;
         flex-direction: column;
@@ -601,7 +601,7 @@ nav ul a img:hover {
         font-size: 15px;
         display: flex;
         flex-direction: column;
-        height: 50vh;
+        height: 75vh;
     }
 
     nav ul {
