@@ -1,3 +1,4 @@
+/* Общие стили для всех устройств */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,12 +7,11 @@ body {
     color: #060606;
     scroll-behavior: smooth;
 }
-html {
-    scroll-behavior: smooth;
-}
+
 html, body {
     width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 header {
@@ -23,12 +23,12 @@ header {
     height: 35rem;
     justify-content: space-between;
 }
+
 nav {
     display: flex;
     justify-content: center;
     background: #34495e00;
     padding: 1rem 0;
-   
 }
 
 nav ul {
@@ -36,7 +36,6 @@ nav ul {
     padding: 0;
     display: flex;
     gap: 30px;
-   
 }
 
 nav a {
@@ -44,22 +43,21 @@ nav a {
     color: white;
     font-size: 24px;
     transition: color 0.3s;
-
 }
 
 nav a:hover {
     color: #1abc9c;
 }
+
 .language-buttons a {
     padding: 0.25rem;
-    
 }
 
 .services-container {
     display: flex;
     justify-content: center;
-    gap: 20px; /* Расстояние между карточками */
-    flex-wrap: wrap; /* Перенос на новую строку, если не хватает места */
+    gap: 20px;
+    flex-wrap: wrap;
 }
 
 .service {
@@ -81,22 +79,22 @@ nav a:hover {
     left: 0;
     width: 100%;
     height: 4px;
-    background-color: #000000; /* Акцентная полоса сверху */
+    background-color: #000000;
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.3s ease;
-  
 }
+
 .section h2 {
     padding-left: 3rem;
 }
 
 .service:hover::before {
-    transform: scaleX(1); /* Появление акцентной полосы при наведении */
+    transform: scaleX(1);
 }
 
 .service:hover {
-    transform: translateY(-5px); /* Поднимаем карточку при наведении */
+    transform: translateY(-5px);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -127,23 +125,23 @@ nav a:hover {
 }
 
 h2 {
-   font-size: 32px; 
-   color:rgb(95, 95, 95);
+    font-size: 32px;
+    color: rgb(95, 95, 95);
 }
+
 h3 {
-   font-size: 42px; 
+    font-size: 42px;
 }
-
-
 
 .about {
     display: flex;
-    align-items: left;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 40px;
     background-color: #eae9e9;
     font-size: 24px;
 }
+
 .about-content {
     flex: 1;
     max-width: 60%;
@@ -154,70 +152,72 @@ h3 {
     max-width: 35%;
     text-align: center;
 }
+
 .about-text {
     padding-top: 40px;
-    background-color: #ffffff; /* Белый фон */
-    border-radius: 15px; /* Закругленные углы */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Тень */
-    padding: 20px; /* Внутренние отступы */
-    max-width: 100%; /* Максимальная ширина блока */
-    margin: 0 auto; /* Центрирование блока */
-    border: 1px solid #e0e0e0; /* Легкая рамка */
-    transition: box-shadow 0.3s ease; /* Плавное изменение тени при наведении */
-   
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    border: 1px solid #e0e0e0;
+    transition: box-shadow 0.3s ease;
 }
+
 .about-text:hover {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Усиление тени при наведении */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
 }
 
 .about-image img {
     width: 100%;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Тень для картинки */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .about-image img:hover {
-    transform: scale(1.05); /* Легкое увеличение при наведении */
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Усиление тени при наведении */
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .about-features {
     display: flex;
-    gap: 10px; /* Расстояние между иконками */
-    margin-top: 10rem; /* Отступ от текста */
+    gap: 10px;
+    margin-top: 10rem;
 }
 
 .feature-item {
     text-align: center;
 }
+
 .feature-item img {
-   width: 30%;
+    width: 30%;
 }
+
 .feature-item-service {
-     text-align: center;
+    text-align: center;
 }
+
 .feature-item-service img {
     width: 10%;
 }
-
 
 /* Gallery */
 .gallery-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px; /* Отступы между фото */
+    gap: 10px;
     padding: 20px;
     position: relative;
 }
 
-/* Стили для картинок */
 .gallery-item {
     border-radius: 10px;
     overflow: hidden;
-    opacity: 0; /* Для анимации */
-    transform: scale(0.5) rotate(-10deg); /* Стартовая трансформация */
+    opacity: 0;
+    transform: scale(0.5) rotate(-10deg);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
@@ -228,12 +228,10 @@ h3 {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Анимация при наведении */
 .gallery-item:hover img {
     transform: scale(1.1);
 }
 
-/* Разные размеры для хаотичного эффекта */
 .gallery-item:nth-child(odd) {
     width: 180px;
     height: 200px;
@@ -244,7 +242,6 @@ h3 {
     height: 280px;
 }
 
-/* Некоторые элементы еще больше */
 .gallery-item:nth-child(3n) {
     width: 220px;
     height: 250px;
@@ -255,14 +252,13 @@ h3 {
     height: 200px;
 }
 
-
 .overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.6); /* Затемнение */
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -271,7 +267,7 @@ h3 {
 }
 
 .gallery-item:hover .overlay {
-    opacity: 1; /* Появление текста при наведении */
+    opacity: 1;
 }
 
 .overlay p {
@@ -281,7 +277,6 @@ h3 {
     margin: 0;
 }
 
-/* Анимация появления */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -310,18 +305,15 @@ h3 {
     animation-delay: 0.6s;
 }
 
-
 /* FOOTER SECTION */
-
 .footer {
-    background-color: #2c3e50; /* Темный фон */
+    background-color: #2c3e50;
     color: white;
     padding: 20px 10%;
     text-align: center;
     font-size: 0.9rem;
-    border-top: 1px solid #34495e; /* Легкая рамка сверху */
+    border-top: 1px solid #34495e;
     display: flex;
-
 }
 
 .footer-content {
@@ -330,13 +322,13 @@ h3 {
 }
 
 .footer a {
-    color: #1abc9c; /* Цвет ссылки */
+    color: #1abc9c;
     text-decoration: none;
     transition: color 0.3s ease;
 }
 
 .footer a:hover {
-    color: #16a085; /* Цвет ссылки при наведении */
+    color: #16a085;
 }
 
 .social-links {
@@ -365,9 +357,10 @@ h3 {
     border-radius: 5%;
     cursor: pointer;
     font-size: 1.2rem;
-    display: none; /* Скрыть по умолчанию */
+    display: none;
     transition: background-color 0.3s ease;
 }
+
 #scroll-to-top:hover {
     background-color: #16a085;
 }
@@ -380,15 +373,15 @@ h3 {
 nav ul a img {
     width: 30px;
 }
+
 nav ul a img:hover {
     box-shadow: #000000;
     color: #eae9e9;
 }
 
-/* CONTACT SECTION*/
-
+/* CONTACT SECTION */
 #contact {
-    background: linear-gradient(135deg, #2c3e50, #34495e); /* Градиентный фон */
+    background: linear-gradient(135deg, #2c3e50, #34495e);
     color: white;
     padding: 3rem 10%;
     text-align: center;
@@ -409,30 +402,26 @@ nav ul a img:hover {
 
 .contact-info div {
     display: flex;
-    align-items: center; /* Выравнивание иконки и текста по центру */
-    gap: 8px; /* Отступ между иконкой и текстом */
+    align-items: center;
+    gap: 8px;
 }
 
-
 .contact-info p {
-    margin: 0; 
+    margin: 0;
 }
 
 .contact-info {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
     gap: 10px;
     animation-delay: 0.2s;
-   
 }
+
 .contact-info, #map, .contact-button {
     opacity: 0;
     animation: fadeIn 1s ease forwards;
 }
-
-
-
 
 #map {
     margin: 2rem 0;
@@ -502,9 +491,6 @@ nav ul a img:hover {
 #contact-form button:active {
     transform: translateY(0);
 }
-
-/* Разные тексты для мобильных и десктопных */
-
 .mobile-text {
     display: block;
 }
@@ -513,18 +499,28 @@ nav ul a img:hover {
     display: none;
 }
 
+/* На десктопах показываем полный текст */
+@media (min-width: 768px) {
+    .mobile-text {
+        display: none;
+    }
 
+    .desktop-text {
+        display: block;
+    }
+}
 
-
+/* Медиа-запросы для адаптивности */
 @media (max-width: 1024px) {
-  header {
+    header {
         width: 100%;
         height: 50vh;
         font-size: 20px;
         display: flex;
         flex-direction: column;
     }
-      .about-image {
+
+    .about-image {
         display: none;
     }
 
@@ -536,39 +532,30 @@ nav ul a img:hover {
     nav ul {
         gap: 15px;
     }
+
     .service {
         width: 45%;
     }
-
-}
-@media (min-width: 768px) {
-    .mobile-text {
-        display: none;
-    }
-
-    .desktop-text {
-        display: block;
-    }
 }
 
-
-/* Для экранов до 768px (мобильные) */
 @media (max-width: 768px) {
-  header {
+    header {
         width: 100%;
         height: 50vh;
         font-size: 15px;
         display: flex;
         flex-direction: column;
     }
+
     nav ul {
         flex-direction: column;
         align-items: center;
-      
     }
-     .language-buttons {
+
+    .language-buttons {
         margin-top: 20px;
     }
+
     .about-image {
         display: none;
     }
@@ -576,108 +563,144 @@ nav ul a img:hover {
     .service {
         width: 90%;
     }
+        @media (max-height: 600px) {
+        nav ul {
+            flex-direction: row; /* Меняем на row, если высота меньше 600px */
+            align-items: center;
+        }
+    }
+
+    @media (min-height: 601px) {
+        nav ul {
+            flex-direction: column; /* Меняем на column, если высота больше 600px */
+            align-items: center;
+        }
+    }
+
     .gallery-item {
         width: 100%;
     }
 
-      #contact {
-        display: flex;
-        flex-direction: column;
-    }
-   
-}
-
-/* Для экранов до 480px (очень маленькие устройства) */
-@media (max-width: 480px) {
-    header {
- 
-        font-size: 15px;
-        display: flex;
-        flex-direction: column;
-    }
-    nav ul {
-        text-align: center;
-    }
-    .about-features {
-        display: flex;
-        flex-direction: column;
-    }
     #contact {
         display: flex;
         flex-direction: column;
     }
+}
+
+@media (max-width: 480px) {
+    header {
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    nav ul {
+        text-align: center;
+    }
+    .about {
+        display: block ;
+    }
+    .about-content h2 {
+        font-size: 25px;
+    }
+     .about-content h3 {
+        font-size: 35px;
+    }
+    .about-content p {
+        font-size: 18px;
+    }
+
+    .about-features {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #contact {
+        display: flex;
+        flex-direction: column;
+    }
+
     nav {
         justify-content: center;
     }
+
     .language-buttons {
         margin-top: 20px;
     }
-   
+
     nav a {
         font-size: 1.5rem;
     }
+
     .service {
         width: 100%;
     }
+
     .footer-logo {
         display: none;
     }
-     .about {
+
+    .about {
         justify-content: space-around;
         width: 100%;
     }
+
     .about-image {
         display: none;
     }
-  
-
 }
 
-@media (max-width: 380px) { /*Мили пиздрические айфоны*/
+
+@media (max-width: 380px) {
     header {
         font-size: 10px;
         display: flex;
         flex-direction: column;
         height: 50vh;
-    
     }
+
     .language-buttons {
         margin-top: 20px;
     }
+
     header h1 {
         font-size: 15px;
-    
     }
+
     nav ul {
         text-align: center;
     }
+
     .about-features {
         display: flex;
         flex-direction: column;
     }
-  
+
     nav {
         justify-content: center;
     }
- 
-   
+
     nav a {
         font-size: 1.5rem;
     }
+
     .service {
         width: 100%;
     }
+
     .footer-logo {
         display: none;
     }
-     .about {
+
+    .about {
         justify-content: space-around;
         width: 100%;
     }
+
     .about-text {
         width: 80%;
-    
     }
+
     .about-image {
         display: none;
     }
@@ -685,21 +708,19 @@ nav ul a img:hover {
     .footer {
         width: 100%;
     }
+
     .gallery-container {
         width: 100%;
     }
+
     #scroll-to-top {
         font-size: 30px;
         opacity: 0.85;
     }
-      #contact {
+
+    #contact {
         display: flex;
         flex-direction: column;
         width: 100%;
     }
-  
-
 }
-
-
-
