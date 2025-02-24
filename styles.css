@@ -46,6 +46,10 @@ nav a {
 nav a:hover {
     color: #1abc9c;
 }
+.language-buttons a {
+    padding: 0.25rem;
+    
+}
 
 .services-container {
     display: flex;
@@ -193,31 +197,60 @@ h3 {
     width: 10%;
 }
 
+
+/* Gallery */
 .gallery-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Адаптивная сетка */
-    gap: 20px; /* Расстояние между изображениями */
-    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px; /* Отступы между фото */
+    padding: 20px;
+    position: relative;
 }
 
+/* Стили для картинок */
 .gallery-item {
-    position: relative;
-    overflow: hidden;
     border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    opacity: 0; /* Для анимации */
+    transform: scale(0.5) rotate(-10deg); /* Стартовая трансформация */
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .gallery-item img {
     width: 100%;
-    height: auto;
-    display: block;
-    transition: transform 0.3s ease;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
 }
 
+/* Анимация при наведении */
 .gallery-item:hover img {
-    transform: scale(1.1); /* Увеличение изображения при наведении */
+    transform: scale(1.1);
 }
+
+/* Разные размеры для хаотичного эффекта */
+.gallery-item:nth-child(odd) {
+    width: 180px;
+    height: 200px;
+}
+
+.gallery-item:nth-child(even) {
+    width: 250px;
+    height: 280px;
+}
+
+/* Некоторые элементы еще больше */
+.gallery-item:nth-child(3n) {
+    width: 220px;
+    height: 250px;
+}
+
+.gallery-item:nth-child(5n) {
+    width: 300px;
+    height: 200px;
+}
+
 
 .overlay {
     position: absolute;
@@ -273,93 +306,8 @@ h3 {
     animation-delay: 0.6s;
 }
 
-#contact {
-    background: linear-gradient(135deg, #2c3e50, #34495e); /* Градиентный фон */
-    color: white;
-    padding: 3rem 10%;
-    text-align: center;
-}
 
-#contact h2 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
-    color: white;
-}
-
-.contact-info {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    margin-bottom: 2rem;
-}
-
-.contact-item {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.contact-icon {
-    width: 24px;
-    height: 24px;
-}
-
-.contact-item p {
-    font-size: 1.2rem;
-    margin: 0;
-}
-
-#map {
-    margin: 2rem 0;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.contact-button {
-    background-color: #1abc9c;
-    color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.contact-button:hover {
-    background-color: #16a085;
-}
-
-/* Анимация для текста */
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.contact-info, #map, .contact-button {
-    opacity: 0;
-    animation: fadeIn 1s ease forwards;
-}
-
-.contact-info {
-    animation-delay: 0.2s;
-}
-
-#map {
-    animation-delay: 0.4s;
-}
-
-.contact-button {
-    animation-delay: 0.6s;
-}
-
+/* FOOTER SECTION */
 
 .footer {
     background-color: #2c3e50; /* Темный фон */
@@ -368,6 +316,8 @@ h3 {
     text-align: center;
     font-size: 0.9rem;
     border-top: 1px solid #34495e; /* Легкая рамка сверху */
+    display: flex;
+
 }
 
 .footer-content {
@@ -417,3 +367,309 @@ h3 {
 #scroll-to-top:hover {
     background-color: #16a085;
 }
+
+.footer-logo img {
+    width: 300px;
+    border-radius: 10px;
+}
+
+nav ul a img {
+    width: 30px;
+}
+nav ul a img:hover {
+    box-shadow: #000000;
+    color: #eae9e9;
+}
+
+/* CONTACT SECTION*/
+
+#contact {
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Градиентный фон */
+    color: white;
+    padding: 3rem 10%;
+    text-align: center;
+    display: flex;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: white;
+    padding-left: 0;
+}
+
+.contact-icon {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-info div {
+    display: flex;
+    align-items: center; /* Выравнивание иконки и текста по центру */
+    gap: 8px; /* Отступ между иконкой и текстом */
+}
+
+
+.contact-info p {
+    margin: 0; 
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+    gap: 10px;
+    animation-delay: 0.2s;
+   
+}
+.contact-info, #map, .contact-button {
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+
+
+
+#map {
+    margin: 2rem 0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    animation-delay: 0.4s;
+}
+
+.contact-button {
+    animation-delay: 0.6s;
+}
+
+#contact-form {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#contact-form input,
+#contact-form textarea {
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    outline: none;
+}
+
+#contact-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#contact-form button {
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+#contact-form button:hover {
+    background: linear-gradient(135deg, #0056b3, #003c7e);
+    transform: translateY(-2px);
+}
+
+#contact-form button:active {
+    transform: translateY(0);
+}
+
+
+
+@media (max-width: 1024px) {
+  header {
+        width: 100%;
+        height: 50vh;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+      .about-image {
+        display: none;
+    }
+
+    nav a {
+        font-size: 1.5rem;
+        padding: 10px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+    .service {
+        width: 45%;
+    }
+}
+
+/* Для экранов до 768px (мобильные) */
+@media (max-width: 768px) {
+  header {
+        width: 100%;
+        height: 50vh;
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+      
+    }
+     .language-buttons {
+        margin-top: 20px;
+    }
+    .about-image {
+        display: none;
+    }
+
+    .service {
+        width: 90%;
+    }
+    .gallery-item {
+        width: 100%;
+    }
+
+      #contact {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Для экранов до 480px (очень маленькие устройства) */
+@media (max-width: 480px) {
+    header {
+ 
+        font-size: 15px;
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul {
+        text-align: center;
+    }
+    .about-features {
+        display: flex;
+        flex-direction: column;
+    }
+    #contact {
+        display: flex;
+        flex-direction: column;
+    }
+    nav {
+        justify-content: center;
+    }
+    .language-buttons {
+        margin-top: 20px;
+    }
+   
+    nav a {
+        font-size: 1.5rem;
+    }
+    .service {
+        width: 100%;
+    }
+    .footer-logo {
+        display: none;
+    }
+     .about {
+        justify-content: space-around;
+        width: 100%;
+    }
+    .about-image {
+        display: none;
+    }
+    .about-content{
+        max-width: 100%;
+    }
+
+}
+
+@media (max-width: 380px) { /*Мили пиздрические айфоны*/
+    header {
+        font-size: 10px;
+        display: flex;
+        flex-direction: column;
+        height: 75vh;
+        width: 100%;
+    }
+    header h1 {
+        font-size: 25px;
+    }
+    nav ul {
+        text-align: center;
+    }
+    .about-features {
+        display: flex;
+        flex-direction: column;
+    }
+    #contact {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    nav {
+        justify-content: center;
+    }
+    .language-buttons {
+        margin-top: 20px;
+    }
+   
+    nav a {
+        font-size: 1.5rem;
+    }
+    .service {
+        width: 100%;
+    }
+    .footer-logo {
+        display: none;
+    }
+     .about {
+        justify-content: space-around;
+        width: 100%;
+    }
+    .about-image {
+        display: none;
+    }
+    .about-content{
+        max-width: 100%;
+    }
+    .footer {
+        width: 100%;
+    }
+    .gallery-container {
+        width: 100%;
+    }
+    #scroll-to-top {
+        font-size: 30px;
+        opacity: 0.85;
+    }
+  
+
+}
+
+
+
