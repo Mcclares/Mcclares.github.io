@@ -613,6 +613,9 @@ tr:nth-child(even) {
     cursor: pointer;
     transition: color 0.3s;
 }
+nav {
+    margin-right: 9%;
+}
 
 .closePriceList:hover {
     color: #d9534f;
@@ -628,7 +631,7 @@ tr:nth-child(even) {
     }
 }
 
-@media (max-width: 1025px) {
+@media (max-width: 1500px) {
     header {
         width: 100%;
         height: 50vh;
@@ -639,6 +642,9 @@ tr:nth-child(even) {
 
     .about-image {
         display: none;
+    }
+    .language-buttons {
+        margin-right: 9%;
     }
 
     nav a {
@@ -674,10 +680,10 @@ tr:nth-child(even) {
     
 }
 
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     header {
         width: 100%;
-        height: 50vh;
+        height: 60vh;
         font-size: 15px;
         display: flex;
         flex-direction: column;
@@ -728,6 +734,10 @@ tr:nth-child(even) {
             flex-direction: row; /* Меняем на row, если высота меньше 600px */
             align-items: center;
         }
+        .about {
+            justify-content: normal;
+            width: 650px;
+        }
     }
 
     @media (min-height: 601px) {
@@ -738,6 +748,12 @@ tr:nth-child(even) {
     }
 
 }
+@media(max-width: 600px) {
+    .about {
+        justify-content: normal;
+        width: 650px;
+    }
+}
 
 @media (max-width: 480px) {
     header {
@@ -745,6 +761,10 @@ tr:nth-child(even) {
         display: flex;
         flex-direction: column;
         height: 75vh;
+    }
+    .about {
+        justify-content: normal;
+        width: 500px;
     }
     
 
@@ -756,7 +776,7 @@ tr:nth-child(even) {
         font-size: 25px;
     }
      .about-content h3 {
-        font-size: 35px;
+        font-size: 20px;
     }
     .about-content p {
         font-size: 18px;
@@ -774,7 +794,7 @@ tr:nth-child(even) {
 
     nav {
         justify-content: center;
-        padding-right: 9%;
+     
     }
 
  
@@ -805,13 +825,14 @@ tr:nth-child(even) {
         flex-direction: column;
         height: 65vh;
     }
+    
 
     .language-buttons {
         margin-top: 20px;
     }
 
     header h1 {
-        font-size: 15px;
+        font-size: 17px;
     }
 
     nav ul {
@@ -828,7 +849,7 @@ tr:nth-child(even) {
     }
 
     nav a {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     .service {
