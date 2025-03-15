@@ -669,7 +669,7 @@ nav {
 .folder {
     background-color: #444;
     color: #fff;
-    padding: 15px 30px;
+    padding: 15px 10px;
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s;
@@ -689,8 +689,8 @@ nav {
 }
 
 .preview-image {
-    width: 120px;
-    height: 80px;
+    width: 250px;
+    height: 250px;
     object-fit: cover;
     cursor: pointer;
     border-radius: 5px;
