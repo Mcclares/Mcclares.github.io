@@ -372,6 +372,7 @@ h3 {
     position: fixed;
     bottom: 20px;
     right: 20px;
+    z-index: 9999;
     background-color: #1abcac;
     color: white;
     border: none;
@@ -953,10 +954,6 @@ nav {
     .footer {
         width: 100%;
     }
-
-    #scroll-to-top {
-        font-size: 30px;
-        opacity: 0.85;
-    }
+    
 
 }
