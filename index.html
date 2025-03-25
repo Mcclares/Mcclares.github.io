@@ -238,16 +238,31 @@
         </div>
         <div>
             <img src="static/icons/email.png" alt="E-post" class="contact-icon">
-            <p>info@ksv-ehitus.ee</p>
+            <p>info@ksvehitus.ee</p>
         </div>
     </div>
     <div id="contact-form">
-        <form action="https://formspree.io/f/YOUR_ENDPOINT_ID" method="POST">
-            <input type="text" name="name" placeholder="Teie nimi" required>
-            <input type="email" name="email" placeholder="Teie e-post" required>
+        <form id="contact_form_emailJs">
+            <input type="text" name="user_name" placeholder="Teie nimi" required>
+            <input type="email" name="user_email" placeholder="Teie e-post" required>
             <textarea name="message" placeholder="Teie sõnum" required></textarea>
             <button type="submit">Saada</button>
         </form>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                emailjs.init("Z_7cwUJtV_EHFSCvy"); 
+
+                document.getElementById("contact_form_emailJs").addEventListener("submit", function(event) {
+                    event.preventDefault(); 
+
+                    emailjs.sendForm("ksvehitus_ID_25", "template_a6a9iq1", this)
+                        .then(() => alert("Сообщение успешно отправлено!"))
+                        .catch((err) => alert("Ошибка при отправке: " + err));
+                });
+            });
+        </script>
+        
     </div>
     <div id="map">
         <iframe
