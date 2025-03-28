@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/hinnapakkumine.css">
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <title>Hinnapakumine</title>
+</head>
+<body>
+<div class="container">
+    <h1>Hinnapakkumine</h1>
+    <form id="contact-form">
+        <div class="form-group">
+            <label for="name">Nimi</label>
+            <input type="text" id="name" name="name" placeholder="Sisesta oma nimi" required>
+        </div>
+
+        <div class="form-group">
+            <label for="email">E-post</label>
+            <input type="email" id="email" name="email" placeholder="Sisesta oma e-post" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="telefon">E-post</label>
+            <input type="tel" id="telefon" name="telefon" placeholder="+372 000 000" required>
+        </div>
+        
+        
+
+        <div class="form-group">
+            <label for="message">Kirjeldus</label>
+            <textarea id="message" name="message" rows="5" placeholder="Kirjeldage oma vajadusi" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <label class="category-label">Valige kategooria</label>
+            <div class="category-options">
+                <div class="category-option">
+                    <input type="radio" id="category1" name="category" value="Kategooria 1" required>
+                    <label for="category1">Kategooria 1</label>
+                </div>
+                <div class="category-option">
+                    <input type="radio" id="category2" name="category" value="Kategooria 2" required>
+                    <label for="category2">Kategooria 2</label>
+                </div>
+                <div class="category-option">
+                    <input type="radio" id="category3" name="category" value="Kategooria 3" required>
+                    <label for="category3">Kategooria 3</label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label for="price">Hinnapakkumine</label>
+            <input type="number" id="price" name="price" placeholder="Sisesta oma hinnapakkumine" required>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Saada pakkumine">
+        </div>
+    </form>
+    <script>
+        (function() {
+            emailjs.init("Z_7cwUJtV_EHFSCvy");
+        })();
+
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); 
+
+            let category = document.querySelector('input[name="category"]:checked').value; // Получаем выбранную категорию
+
+            let formData = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                message: document.getElementById("message").value,
+                telefon: document.getElementById("telefon").value,
+                category: category,
+                price: document.getElementById("price").value
+            };
+
+            emailjs.send("ksvehitus_ID_25", "template_gg2eibc", formData)
+                .then(function(response) {
+                    alert("Sõnum saadetud edukalt!"); 
+                    document.getElementById("contact-form").reset(); 
+                }, function(error) {
+                    alert("Tekkis viga. Proovige uuesti."); 
+                });
+        });
+    </script>
+</div>
+</body>
+</html>

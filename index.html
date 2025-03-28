@@ -198,32 +198,26 @@
             </table>
         </div>
     </div>
-
-
-
+    
     <section id="gallery" class="section">
         <h2>Meie tööd</h2>
 
         <!-- Папки с проектами -->
         <div class="folders">
             <div class="folder" onclick="showPreviewImages('project1')">Sisetööd</div>
-            <div class="folder" onclick="showPreviewImages('project2')">Projekt 2</div>
-            <div class="folder" onclick="showPreviewImages('project3')">Projekt 3</div>
+            <div class="folder" onclick="showPreviewImages('project2')">Välistööd</div>
+            <div class="folder" onclick="showPreviewImages('project3')">Katutööd</div>
         </div>
 
         <!-- Контейнер для предпросмотра (3 фото) -->
         <div id="preview-container" class="preview-container"></div>
-
-        <!-- Модальное окно с галереей -->
+        
         <div id="gallery-modal" class="gallery-modal">
             <span class="close" onclick="closeGalleryModal()">&times;</span>
             <div class="gallery-content">
-                <!-- Основное изображение -->
                 <div class="big-image-container">
                     <img id="big-image" class="big-image" src="" alt="Фото">
                 </div>
-
-                <!-- Миниатюры -->
                 <div id="thumbnails" class="thumbnails"></div>
             </div>
         </div>
@@ -257,7 +251,7 @@
                     event.preventDefault(); 
 
                     emailjs.sendForm("ksvehitus_ID_25", "template_a6a9iq1", this)
-                        .then(() => alert("Сообщение успешно отправлено!"))
+                        .then(() => alert("Sõnum on saadetud!"))
                         .catch((err) => alert("Ошибка при отправке: " + err));
                 });
             });
@@ -372,24 +366,51 @@
        
         const projectGalleries = {
             project1: {
-                preview: ["static/WhatsApp Image 2025-03-15 at 16.54.36.jpeg", "static/WhatsApp Image 2025-03-20 at 13.39.50.jpeg", "static/WhatsApp Image 2025-03-20 at 13.40.17.jpeg"],
+                preview: ["static/contstructionPhoto/sise/WhatsApp Image 2025-03-15 at 16.54.36.jpeg", 
+                    "static/contstructionPhoto/sise/WhatsApp Image 2025-03-15 at 16.54.49 (2).jpeg", 
+                    "static/contstructionPhoto/sise/WhatsApp Image 2025-03-15 at 16.54.41.jpeg"],
                 fullGallery: [
-                    "static/WhatsApp Image 2025-03-20 at 13.40.25.jpeg", "static/WhatsApp Image 2025-03-20 at 13.40.36.jpeg", "static/WhatsApp Image 2025-03-20 at 13.41.18.jpeg",
-                    "static/project1-4.jpg", "static/project1-5.jpg", "static/project1-6.jpg"
+                    "static/contstructionPhoto/sise/WhatsApp Image 2025-03-15 at 16.54.56 (3).jpeg",
+                    "static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.39.50.jpeg",
+                    "static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.40.17.jpeg",
+                    "static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.40.25.jpeg",
+                    "static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.40.36.jpeg",
+                    "static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.41.18.jpeg",
+                    "static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.42.01.jpeg",
+                    "static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.42.49.jpeg",
+                    "static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.43.21.jpeg"
                 ]
             },
             project2: {
-                preview: ["static/project2-1.jpg", "static/project2-2.jpg", "static/project2-3.jpg"],
+                preview: ["static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.41 (1).jpeg",
+                    "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.42.jpeg", 
+                    "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.45 (1).jpeg"],
                 fullGallery: [
-                    "static/project2-1.jpg", "static/project2-2.jpg", "static/project2-3.jpg",
-                    "static/project2-4.jpg", "static/project2-5.jpg", "static/project2-6.jpg"
+                    "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.45.jpeg",
+                    "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.43.jpeg",
+                    "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.42 (1).jpeg",
+                    "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.48.jpeg", 
+                    "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.48 (1).jpeg", 
+                    "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.48 (2).jpeg",
+                    "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.53.jpeg",
+                    "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.53 (1).jpeg",
+                    "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.54.jpeg",
+                    "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.54 (1).jpeg",
+                    "static/contstructionPhoto/valis/WhatsApp Image 2025-03-19 at 15.04.06 (1).jpeg",
+                    "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.48 (1).jpeg",
+                    
                 ]
             },
             project3: {
-                preview: ["static/project3-1.jpg", "static/project3-2.jpg", "static/project3-3.jpg"],
+                preview: ["static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.45 (6).jpeg", 
+                    "static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.47.jpeg", 
+                    "static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.47 (1).jpeg"],
                 fullGallery: [
-                    "static/project3-1.jpg", "static/project3-2.jpg", "static/project3-3.jpg",
-                    "static/project3-4.jpg", "static/project3-5.jpg", "static/project3-6.jpg"
+                    "static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.47 (2).jpeg", 
+                    "static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.47 (3).jpeg", 
+                    "static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.47 (4).jpeg",
+                    "static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.54 (4).jpeg", 
+                    "static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.54 (5).jpeg",
                 ]
             }
         };

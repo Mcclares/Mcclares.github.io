@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K.S.V Ehitus OÜ — Construction Services in Tartu | Turnkey Renovation</title>
+    <meta name="description"
+          content="K.S.V Ehitus OÜ — professional construction services in Tartu. Turnkey renovation of apartments, houses, and offices. Quality and reliability.">
+    <link rel="stylesheet" href="../styles2.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" defer></script>
+</head>
+
+<body>
+<header>
+    <h1 class="fade-in">K.S.V Ehitus OÜ<br>Construction Services | Renovation Works in Tartu</h1>
+
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="./price_offer/priceQuote.html">Offer</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="language-buttons">
+        <a href="../index.html"><img src="../static/flags/estonia-flag.png" alt="Estonian" title="Estonian"></a>
+        <a href="index.html"><img src="../static/flags/united-kingdom.png" alt="English" title="English"></a>
+        <a href="../ru/index.html"><img src="../static/flags/russia.png" alt="Russian" title="Russian"></a>
+    </div>
+
+</header>
+<section id="about" class="about">
+    <div class="about-content">
+        <h2>About Us</h2>
+        <h3><b>We turn ideas into reality.</b></h3>
+        <div class="about-text">
+            <div class="desktop-text">
+                <p>We are a construction company <b>"K.S.V Ehitus"</b>, specializing in high-quality turnkey construction projects.
+                    Our professional team ensures the highest level of construction work at every stage – from
+                    design to project completion.</p>
+                <p>We offer comprehensive services: from foundation work to interior finishing. Our specialists use
+                    modern technologies and materials to ensure the durability and reliability of every project. We strictly adhere
+                    to deadlines and pay attention to every detail to exceed your expectations.</p>
+                <p>With <b>"K.S.V Ehitus"</b>, you get not only construction work but also confidence in quality and reliability. We do not
+                    just build buildings, we also create long-term relationships with our clients, based on trust and
+                    professionalism.</p>
+            </div>
+            <div class="mobile-text">
+                <p>
+                    <b>"K.S.V Ehitus"</b> is a construction company specializing in high-quality turnkey construction projects. We offer
+                    comprehensive services from foundations to interior finishing, using modern technologies and materials.
+                    Our goal is to ensure the durability, reliability, and satisfaction of every client.
+                </p>
+            </div>
+
+        </div>
+        <div class="about-features">
+            <div class="feature-item">
+                <img src="../static/icons/implementation.png" alt="Architecture">
+                <p><b>Exterior Work</b></p>
+            </div>
+            <div class="feature-item">
+                <img src="../static/icons/interior.png" alt="Interior">
+                <p><b>Interior Work</b></p>
+            </div>
+            <div class="feature-item">
+                <img src="../static/icons/blueprint.png" alt="Planning">
+                <p><b>Planning</b></p>
+            </div>
+            <div class="feature-item">
+                <img src="../static/icons/number-12.png" alt="6 years on the market">
+                <p><b>Years on the market</b></p>
+            </div>
+        </div>
+    </div>
+    <div class="about-image">
+        <img src="../static/SecondImage.jpg" alt="Construction company K.S.V Ehitus">
+    </div>
+</section>
+<section id="services" class="section">
+    <h2>Pricing</h2>
+    <div class="services-container">
+        <!-- Service 1 -->
+        <div class="service" onclick="openPriceListModal('priceListModal1')">
+            <div class="service-content">
+                <h3>House Construction</h3>
+                <p>Comprehensive construction of residential and commercial buildings.</p>
+                <div class="price">
+                    <span class="amount">From <b>€1500/m²</b></span>
+                    <span class="details">(depends on project complexity)</span>
+                </div>
+                <div class="feature-item-service">
+                    <img src="../static/icons/architecture.png" alt="House Construction">
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 2 -->
+        <div class="service" onclick="openPriceListModal('priceListModal2')">
+            <div class="service-content">
+                <h3>Renovation & Finishing</h3>
+                <p>Renovation of any scale: from cosmetic to major repairs.</p>
+                <div class="price">
+                    <span class="amount">From <b>€50/m²</b></span>
+                    <span class="details">(depends on work scope)</span>
+                </div>
+                <div class="feature-item-service">
+                    <img src="../static/icons/roller-brush.png" alt="Renovation & Finishing">
+                </div>
+            </div>
+        </div>
+
+        <!-- Service 3 -->
+        <div class="service" onclick="openPriceListModal('priceListModal3')">
+            <div class="service-content">
+                <h3>Concrete & Reinforcement</h3>
+                <p>Preparation for concreting any area.</p>
+                <div class="price">
+                    <span class="amount">From <b>€80/m²</b></span>
+                    <span class="details">(depends on area size)</span>
+                </div>
+                <div class="feature-item-service">
+                    <img src="../static/icons/concrete.png" alt="Concrete & Reinforcement">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Modal Window 1 -->
+<div id="priceListModal1" class="priceListModal">
+    <div class="priceListModal-content">
+        <span class="priceListModal-close" onclick="closePriceListModal('priceListModal1')">&times;</span>
+        <h2>Pricing - House Construction</h2>
+        <table>
+            <tr>
+                <th>Type</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Custom Project</td>
+                <td>€1800/m²</td>
+            </tr>
+            <tr>
+                <td>Standard Project</td>
+                <td>€1500/m²</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Modal Window 2 -->
+<div id="priceListModal2" class="priceListModal">
+    <div class="priceListModal-content">
+        <span class="priceListModal-close" onclick="closePriceListModal('priceListModal2')">&times;</span>
+        <h2>Pricing - Renovation & Finishing</h2>
+        <table>
+            <tr>
+                <th>Work</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Cosmetic Renovation</td>
+                <td>€50/m²</td>
+            </tr>
+            <tr>
+                <td>Major Renovation</td>
+                <td>€100/m²</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+<!-- Modal Window 3 -->
+<div id="priceListModal3" class="priceListModal">
+    <div class="priceListModal-content">
+        <span class="priceListModal-close" onclick="closePriceListModal('priceListModal3')">&times;</span>
+        <h2>Pricing - Concrete & Reinforcement</h2>
+        <table>
+            <tr>
+                <th>Work</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Slab Foundation</td>
+                <td>€90/m²</td>
+            </tr>
+            <tr>
+                <td>Concrete Flooring</td>
+                <td>...</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<section id="gallery" class="section">
+    <h2>Our works</h2>
+
+    <!-- Папки с проектами -->
+    <div class="folders">
+        <div class="folder" onclick="showPreviewImages('project1')">Interior works</div>
+        <div class="folder" onclick="showPreviewImages('project2')">External works</div>
+        <div class="folder" onclick="showPreviewImages('project3')">Roof works</div>
+    </div>
+
+    <!-- Контейнер для предпросмотра (3 фото) -->
+    <div id="preview-container" class="preview-container"></div>
+
+    <div id="gallery-modal" class="gallery-modal">
+        <span class="close" onclick="closeGalleryModal()">&times;</span>
+        <div class="gallery-content">
+            <div class="big-image-container">
+                <img id="big-image" class="big-image" src="" alt="Фото">
+            </div>
+            <div id="thumbnails" class="thumbnails"></div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="section">
+    <div class="contact-info">
+        <h2>Contact</h2>
+        <div>
+            <img src="../static/icons/telephone-call.png" alt="Telefon" class="contact-icon">
+            <p>+372 5824 6165</p>
+        </div>
+        <div>
+            <img src="../static/icons/email.png" alt="E-post" class="contact-icon">
+            <p>info@ksvehitus.ee</p>
+        </div>
+    </div>
+    <div id="contact-form">
+        <form id="contact_form_emailJs">
+            <input type="text" name="user_name" placeholder="Your name" required>
+            <input type="email" name="user_email" placeholder="Your email" required>
+            <textarea name="message" placeholder="Your message" required></textarea>
+            <button type="submit">Send</button>
+        </form>
+        <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                emailjs.init("Z_7cwUJtV_EHFSCvy");
+
+                document.getElementById("contact_form_emailJs").addEventListener("submit", function(event) {
+                    event.preventDefault();
+
+                    emailjs.sendForm("ksvehitus_ID_25", "template_a6a9iq1", this)
+                        .then(() => alert("Sõnum on saadetud!"))
+                        .catch((err) => alert("Ошибка при отправке: " + err));
+                });
+            });
+        </script>
+
+    </div>
+    <div id="map">
+        <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2245.372789924804!2d37.61729931593084!3d55.75582698055302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b54a5a738fa419%3A0x7c347d506f52311f!2sRed%20Square!5e0!3m2!1sen!2sru!4v1633012345678!5m2!1sen!2sru"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy">
+        </iframe>
+    </div>
+</section>
+
+<footer class="footer">
+    <div class="footer-logo">
+        <img src="../static/logo/logo.jpg" alt="Ettevõtte logo">
+    </div>
+    <div class="footer-content">
+        <p>© 2025 Construction Company "K.S.V Ehitus OÜ".<br>Reg.code 14687242 <br>All rights reserved.</p>
+
+    </div>
+    <!-- <div class="social-links">
+        <a href="https://facebook.com" target="_blank"><img src="facebook-icon.png" alt="Facebook"></a>
+        <a href="https://instagram.com" target="_blank"><img src="instagram-icon.png" alt="Instagram"></a>
+    </div> -->
+</footer>
+<button id="scroll-to-top" onclick="scrollToTop()">↑ Up</button>
+
+<script>
+    function openModal(src) {
+        const modal = document.getElementById('modal');
+        const modalImg = document.getElementById('modal-img');
+        modal.style.display = 'block';
+        modalImg.src = src;
+    }
+
+
+    function closeModal() {
+        const modal = document.getElementById('modal');
+        modal.style.display = 'none';
+    }
+
+
+    window.onclick = function (event) {
+        const modal = document.getElementById('modal');
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    };
+
+
+    window.onscroll = function () {
+        var button = document.getElementById("scroll-to-top");
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            button.style.display = "block";
+        } else {
+            button.style.display = "none";
+        }
+    };
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+        });
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+        gsap.from(".fade-in", { opacity: 0, duration: 1, y: -20, stagger: 0.3 });
+        gsap.from(".slide-in", {
+            opacity: 0, x: -100, duration: 1, stagger: 0.3, scrollTrigger: {
+                trigger: ".slide-in",
+                start: "top 80%",
+                toggleActions: "play none none none"
+            }
+        });
+    });
+
+    /**
+     * Функция открытия модального окна
+     * @param {string} id - ID модального окна
+     */
+    function openPriceListModal(id) {
+        let modal = document.getElementById(id);
+        if (modal) {
+            modal.style.display = "flex";
+        }
+    }
+
+    /**
+     * Функция закрытия модального окна
+     * @param {string} id - ID модального окна
+     */
+    function closePriceListModal(id) {
+        let modal = document.getElementById(id);
+        if (modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    window.addEventListener("click", function (event) {
+        let modals = document.getElementsByClassName("priceListModal");
+        for (let modal of modals) {
+            if (event.target === modal) {
+                modal.style.display = "none";
+            }
+        }
+    });
+
+
+    let currentGallery = [];
+
+
+    const projectGalleries = {
+        project1: {
+            preview: ["../static/contstructionPhoto/sise/WhatsApp Image 2025-03-15 at 16.54.36.jpeg",
+                "../static/contstructionPhoto/sise/WhatsApp Image 2025-03-15 at 16.54.49 (2).jpeg",
+                "../static/contstructionPhoto/sise/WhatsApp Image 2025-03-15 at 16.54.41.jpeg"],
+            fullGallery: [
+                "../static/contstructionPhoto/sise/WhatsApp Image 2025-03-15 at 16.54.56 (3).jpeg",
+                "../static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.39.50.jpeg",
+                "../static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.40.17.jpeg",
+                "../static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.40.25.jpeg",
+                "../static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.40.36.jpeg",
+                "../static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.41.18.jpeg",
+                "../static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.42.01.jpeg",
+                "../static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.42.49.jpeg",
+                "../static/contstructionPhoto/sise/WhatsApp Image 2025-03-20 at 13.43.21.jpeg"
+            ]
+        },
+        project2: {
+            preview: ["../static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.41 (1).jpeg",
+                "../static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.42.jpeg",
+                "../static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.45 (1).jpeg"],
+            fullGallery: [
+                "../static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.45.jpeg",
+                "../static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.43.jpeg",
+                "../static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.42 (1).jpeg",
+                "../static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.48.jpeg",
+                "../static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.48 (1).jpeg",
+                "../static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.48 (2).jpeg",
+                "../static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.53.jpeg",
+                "../static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.53 (1).jpeg",
+                "../static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.54.jpeg",
+                "../static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.54 (1).jpeg",
+                "../static/contstructionPhoto/valis/WhatsApp Image 2025-03-19 at 15.04.06 (1).jpeg",
+                "../static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.48 (1).jpeg",
+
+            ]
+        },
+        project3: {
+            preview: ["../static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.45 (6).jpeg",
+                "../static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.47.jpeg",
+                "../static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.47 (1).jpeg"],
+            fullGallery: [
+                "../static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.47 (2).jpeg",
+                "../static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.47 (3).jpeg",
+                "../static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.47 (4).jpeg",
+                "../static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.54 (4).jpeg",
+                "../static/contstructionPhoto/katu/WhatsApp Image 2025-03-15 at 16.54.54 (5).jpeg",
+            ]
+        }
+    };
+
+    // Функция для отображения 3 фото (предпросмотр)
+    function showPreviewImages(project) {
+        const previewContainer = document.getElementById("preview-container");
+        previewContainer.innerHTML = ""; // Очищаем контейнер
+
+        projectGalleries[project].preview.forEach(imageSrc => {
+            const imgElement = document.createElement("img");
+            imgElement.src = imageSrc;
+            imgElement.classList.add("preview-image");
+            imgElement.onclick = () => openProjectGallery(project);
+            previewContainer.appendChild(imgElement);
+        });
+    }
+
+    // Функция для открытия полной галереи
+    function openProjectGallery(project) {
+        currentGallery = projectGalleries[project].fullGallery;
+
+        const bigImage = document.getElementById("big-image");
+        const thumbnailsContainer = document.getElementById("thumbnails");
+
+        // Устанавливаем первое изображение как основное
+        bigImage.src = currentGallery[0];
+
+        // Очищаем миниатюры
+        thumbnailsContainer.innerHTML = "";
+
+        // Добавляем миниатюры
+        currentGallery.forEach(imageSrc => {
+            const imgElement = document.createElement("img");
+            imgElement.src = imageSrc;
+            imgElement.classList.add("thumbnail");
+            imgElement.onclick = () => bigImage.src = imageSrc;
+            thumbnailsContainer.appendChild(imgElement);
+        });
+
+        // Показываем модальное окно
+        document.getElementById("gallery-modal").style.display = "flex";
+    }
+
+    // Закрытие галереи
+    function closeGalleryModal() {
+        document.getElementById("gallery-modal").style.display = "none";
+    }
+
+</script>
+</body>
+
+</html>
