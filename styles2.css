@@ -682,6 +682,7 @@ nav {
     border-radius: 10px;
     cursor: pointer;
     transition: background 0.3s;
+    font-size: 30px;
 }
 
 .folder:hover {
