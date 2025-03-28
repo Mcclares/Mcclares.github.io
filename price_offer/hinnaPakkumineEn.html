@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/hinnapakkumine.css">
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Price offer</title>
 </head>
 <body>
@@ -13,7 +14,7 @@
     <form id="contact-form">
         <div class="form-group">
             <label for="name">Name</label>
-            <input type="text" id="name" name="name" placeholder="Sisesta oma nimi" required>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
         </div>
 
         <div class="form-group">
@@ -30,34 +31,34 @@
 
         <div class="form-group">
             <label for="message">Description</label>
-            <textarea id="message" name="message" rows="5" placeholder="Describe" required></textarea>
+            <textarea id="message" name="message" rows="5" placeholder="Describe your problem" required></textarea>
         </div>
 
         <div class="form-group">
-            <label class="category-label">Valige kategooria</label>
+            <label class="category-label">Choose category</label>
             <div class="category-options">
                 <div class="category-option">
-                    <input type="radio" id="category1" name="category" value="Kategooria 1" required>
-                    <label for="category1">Kategooria 1</label>
+                    <input type="radio" id="category1" name="category" value="Internal works" required>
+                    <label for="category1">Internal works</label>
                 </div>
                 <div class="category-option">
-                    <input type="radio" id="category2" name="category" value="Kategooria 2" required>
-                    <label for="category2">Kategooria 2</label>
+                    <input type="radio" id="category2" name="category" value="External works" required>
+                    <label for="category2">External works</label>
                 </div>
                 <div class="category-option">
-                    <input type="radio" id="category3" name="category" value="Kategooria 3" required>
-                    <label for="category3">Kategooria 3</label>
+                    <input type="radio" id="category3" name="category" value="Roof works" required>
+                    <label for="category3">Roof works</label>
                 </div>
             </div>
         </div>
 
         <div class="form-group">
-            <label for="price">Hinnapakkumine</label>
-            <input type="number" id="price" name="price" placeholder="Sisesta oma hinnapakkumine" required>
+            <label for="price">Price offer</label>
+            <input type="number" id="price" name="price" placeholder="Enter your price offer or leave empty" >
         </div>
 
         <div class="form-group">
-            <input type="submit" value="Saada pakkumine">
+            <input type="submit" value="Send offer">
         </div>
     </form>
     <script>
@@ -81,10 +82,23 @@
 
             emailjs.send("ksvehitus_ID_25", "template_gg2eibc", formData)
                 .then(function(response) {
-                    alert("Sõnum saadetud edukalt!"); 
-                    document.getElementById("contact-form").reset(); 
+                    Swal.fire({
+                        title: "Message sent!",
+                        text: "Your message has been successfully sent!",
+                        icon: "success",
+                        confirmButtonText: "OK"
+                    }).then(() => {
+                        window.location.href = "../en/index.html"; 
+                    });
+
+                    document.getElementById("contact-form").reset();
                 }, function(error) {
-                    alert("Tekkis viga. Proovige uuesti."); 
+                    Swal.fire({
+                        title: "Error!",
+                        text: "An error occurred. Try again!",
+                        icon: "error",
+                        confirmButtonText: "OK"
+                    });
                 });
         });
     </script>
