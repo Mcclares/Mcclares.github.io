@@ -408,6 +408,7 @@
                     "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.42.jpeg", 
                     "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.45 (1).jpeg",
                     "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.45.jpeg",
+                    "static/contstructionPhoto/valis/photo_2025-04-19_17-31-39.jpg",
                     "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.43.jpeg",
                     "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.42 (1).jpeg",
                     "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.48.jpeg",
@@ -424,6 +425,7 @@
                     "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.42.jpeg",
                     "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.45 (1).jpeg",
                     "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.45.jpeg",
+                    "static/contstructionPhoto/valis/photo_2025-04-19_17-31-39.jpg",
                     "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.43.jpeg",
                     "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.42 (1).jpeg",
                     "static/contstructionPhoto/valis/WhatsApp Image 2025-03-15 at 16.54.48.jpeg",
@@ -463,20 +465,44 @@
             }
         };
 
+        let openedProject = null;
         // Функция для отображения 3 фото (предпросмотр)
         function showPreviewImages(project) {
             const previewContainer = document.getElementById("preview-container");
-            previewContainer.innerHTML = ""; // Очищаем контейнер
 
-            projectGalleries[project].preview.forEach(imageSrc => {
+            // Если тот же проект — плавно скрываем изображения
+            if (openedProject === project) {
+                const images = previewContainer.querySelectorAll('.preview-image');
+                images.forEach(img => {
+                    img.classList.remove('visible');
+                });
+
+                // Удаляем после завершения анимации
+                setTimeout(() => {
+                    previewContainer.innerHTML = "";
+                    openedProject = null;
+                }, 400); // соответствует transition в CSS
+                return;
+            }
+
+            // Иначе — загружаем и анимируем новые изображения
+            previewContainer.innerHTML = "";
+
+            projectGalleries[project].preview.forEach((imageSrc, index) => {
                 const imgElement = document.createElement("img");
                 imgElement.src = imageSrc;
                 imgElement.classList.add("preview-image");
                 imgElement.onclick = () => openProjectGallery(project);
                 previewContainer.appendChild(imgElement);
-            });
-        }
 
+                // Добавим анимацию плавного появления с небольшой задержкой
+                setTimeout(() => {
+                    imgElement.classList.add("visible");
+                }, 50 + index * 100); // задержка между картинками
+            });
+
+            openedProject = project;
+        }
         // Функция для открытия полной галереи
         function openProjectGallery(project) {
             currentGallery = projectGalleries[project].fullGallery;
