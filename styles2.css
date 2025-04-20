@@ -68,6 +68,7 @@ nav a:hover {
     justify-content: center;
     gap: 20px;
     flex-wrap: wrap;
+    cursor: pointer;
 }
 
 /* Стили для карточки услуги */
@@ -542,6 +543,8 @@ h3 {
     padding: 30px;
     width: 50%;
     max-width: 600px;
+    max-height: 80vh; 
+    overflow-y: auto;
     border-radius: 12px;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
     text-align: left;
