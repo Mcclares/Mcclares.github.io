@@ -878,6 +878,9 @@ nav {
         justify-content: normal;
         width: 650px;
     }
+    .priceListModal-content {
+        width: 100%;
+    }
 }
 
 @media (max-width: 480px) {
