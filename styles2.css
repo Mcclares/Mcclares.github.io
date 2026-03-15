@@ -1003,3 +1003,21 @@ nav {
     
 
 }
+
+.full-width-image {
+    width: 100%;
+    height: 420px;
+    overflow: hidden;
+}
+
+.full-width-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+@media (max-width: 768px) {
+    .full-width-image {
+        height: 240px;
+    }
+}
