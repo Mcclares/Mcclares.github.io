@@ -1028,3 +1028,9 @@ nav {
         height: 240px;
     }
 }
+
+@media (max-width: 650px) {
+    .full-width-image img {
+        width: 150px;
+    }
+}
